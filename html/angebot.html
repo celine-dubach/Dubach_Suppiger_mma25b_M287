@@ -38,8 +38,9 @@
                 <div class="gold-line"></div>
             </div>
 
-        <div class="w3-row">
-    <div class="w3-quarter w3-padding-small">
+        <!-- Cards: 3-spaltig → Tablet 2-spaltig → Handy 1-spaltig -->
+<div class="w3-row">
+    <div class="w3-col s12 m6 l3 w3-padding-small">
         <div class="w3-card" style="overflow:hidden; height:100%;">
             <img src="../img/dj.jpg" alt="DJ Service" style="width:100%; height:200px; object-fit:cover; display:block;">
             <div class="w3-padding">
@@ -48,7 +49,7 @@
             </div>
         </div>
     </div>
-    <div class="w3-half w3-padding-small">
+    <div class="w3-col s12 m6 l6 w3-padding-small">
         <div class="w3-card" style="overflow:hidden; height:100%;">
             <img src="../img/ballons.webp" alt="Deko Verleih" style="width:100%; height:200px; object-fit:cover; display:block;">
             <div class="w3-padding">
@@ -57,7 +58,7 @@
             </div>
         </div>
     </div>
-    <div class="w3-quarter w3-padding-small">
+    <div class="w3-col s12 m6 l3 w3-padding-small">
         <div class="w3-card" style="overflow:hidden; height:100%;">
             <img src="../img/fotobox.webp" alt="Fotobox" style="width:100%; height:200px; object-fit:cover; display:block;">
             <div class="w3-padding">
@@ -70,23 +71,21 @@
         </div>
 
         <!-- Video + Audio -->
-        <div class="w3-container w3-padding-16">
-            <h2>DJ in Action</h2>
-            <div class="w3-row">
-                <div class="w3-half">
-                    <video controls preload="none" style="width:100%;">
-                        <source src="../img/skeleton_video.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="w3-half w3-padding">
-                    <h3>Hör rein!</h3>
-                    <audio controls preload="none" style="width:100%;">
-                        <source src="../img/partyaudio.mp3" type="audio/mp3">
-                    </audio>
-                    <p>Beispielmix für dein Event</p>
-                </div>
-            </div>
-        </div>
+<div class="w3-col w3-padding">
+    <h3>Voll unser Vibe!</h3>
+    <div class="w3-col s12 m6 w3-padding-small">
+        <video controls preload="none" style="width:100%;">
+            <source src="../img/skeleton_video.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="w3-col s12 m6 w3-padding">
+        <h3>Hör rein!</h3>
+        <audio controls preload="none" style="width:100%;">
+            <source src="../img/partyaudio.mp3" type="audio/mp3">
+        </audio>
+        <p>Beispielmix für dein Event</p>
+    </div>
+</div>
 
         <!-- Accordion -->
         <div class="w3-container w3-padding-16">
