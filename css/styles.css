@@ -216,3 +216,29 @@ audio {
 .ueber-uns-row > div {
     width: 50% !important;
 }
+
+/*Navigation*/
+
+.nav-bar { 
+    display: flex !important; 
+    align-items: center !important; 
+}
+
+.nav-links { 
+    display: flex; 
+    margin-left: auto; 
+}
+
+.hamburger-btn { 
+    display: none !important; 
+    margin-left: auto; 
+    font-size: 2rem; 
+    background: none !important; 
+}
+
+@media (max-width: 600px) {
+    .hamburger-btn { display: block !important; }
+    .nav-links { display: none; flex-direction: column; width: 100%; position: absolute; top: 100%; left: 0; background: var(--black); }
+    .nav-links.open { display: flex; }
+    .nav-links a:hover { background-color: var(--pink) !important; }
+}
