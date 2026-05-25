@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <title>Eventify - Kontakt</title>
@@ -8,74 +8,85 @@
     <link rel="stylesheet" href="../css/styles.css">
 
     <!-- Favicon -->
-    <link rel="icon" type="png" href="../img/favicon.png">
+    <link rel="icon" type="image/png" href="../img/favicon.png">
 </head>
 
 <body>
 
     <!-- Navigation -->
-<header class="w3-top">
-    <div class="w3-bar w3-black w3-padding nav-bar">
-        <a href="../index.html" class="w3-bar-item">
-            <img src="../img/logo-transp.png" alt="Eventify Logo" class="logo">
-        </a>
-        <button class="w3-bar-item w3-button hamburger-btn" onclick="document.getElementById('nav-links').classList.toggle('open')">&#9776;</button>
-        <nav id="nav-links" class="nav-links">
-            <a href="../index.html" class="w3-bar-item w3-button">Startseite</a>
-            <a href="angebot.html" class="w3-bar-item w3-button">Angebot</a>
-            <a href="ueber-uns.html" class="w3-bar-item w3-button">Über uns</a>
-            <a href="kontakt.html" class="w3-bar-item w3-button">Kontakt</a>
-        </nav>
-    </div>
-</header>
-
+    <header class="w3-top">
+        <div class="w3-bar w3-black w3-padding nav-bar">
+            <a href="../index.html" class="w3-bar-item">
+                <img src="../img/logo-transp.png" alt="Eventify Logo" class="logo">
+            </a>
+            <button class="w3-bar-item w3-button hamburger-btn"
+                onclick="document.getElementById('nav-links').classList.toggle('open')"
+                aria-label="Navigation öffnen">&#9776;</button>
+            <nav id="nav-links" class="nav-links">
+                <a href="../index.html" class="w3-bar-item w3-button">Startseite</a>
+                <a href="angebot.html" class="w3-bar-item w3-button">Angebot</a>
+                <a href="ueber-uns.html" class="w3-bar-item w3-button">Über uns</a>
+                <a href="kontakt.html" class="w3-bar-item w3-button">Kontakt</a>
+            </nav>
+        </div>
+    </header>
 
     <!-- Inhalt -->
     <main>
-        <!-- Kontaktiere uns + Anfrage nebeneinander -->
-        <div class="w3-row w3-container w3-padding" style="margin-top:150px; margin-bottom:100px;">
+        <section class="w3-row w3-container w3-padding" style="margin-top:150px; margin-bottom:100px;">
 
-            <!-- Links: Kontaktinfos -->
-            <div class="w3-half w3-padding-small">
-                <div class="section-title">
+            <!-- Kontaktinfos -->
+            <address class="w3-half w3-padding-small">
+                <header class="section-title">
                     <h1>Kontaktiere uns</h1>
                     <div class="gold-line"></div>
-                </div>
+                </header>
                 <h2>Wir freuen uns auf deine Nachricht!</h2>
-                <p>✉ eventify@mail.ch</p>
-                <p>📞 079 123 45 67</p>
-                <p>📍 Bahnhofstrasse 10, 6000 Luzern</p>
-            </div>
+                <p><span role="img" aria-label="E-Mail">✉</span> <a href="mailto:eventify@mail.ch">eventify@mail.ch</a></p>
+                <p><span role="img" aria-label="Telefon">📞</span> <a href="tel:+41791234567">079 123 45 67</a></p>
+                <p><span role="img" aria-label="Adresse">📍</span> Bahnhofstrasse 10, 6000 Luzern</p>
+            </address>
 
-            <!-- Rechts: Formular -->
+            <!-- Kontaktformular -->
             <div class="w3-half w3-padding-small">
                 <div class="w3-card w3-padding anfrage-karte" id="anfrage">
-                    <h3>Anfrage senden</h3>
-                    <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Dein Name">
-                    <input class="w3-input w3-border w3-margin-bottom" type="email" placeholder="Deine E-Mail">
+                    <form action="#" method="post" novalidate>
+                        <h3>Anfrage senden</h3>
 
-                    <label>Welche Leistungen interessieren dich?</label>
+                        <label for="name">Dein Name</label>
+                        <input id="name" class="w3-input w3-border w3-margin-bottom"
+                            type="text" name="name" placeholder="Dein Name" required>
 
-                    <label style="display:block;">
-                        <input type="checkbox" name="leistungen" value="dj"> DJ buchen
-                    </label>
+                        <label for="email">Deine E-Mail</label>
+                        <input id="email" class="w3-input w3-border w3-margin-bottom"
+                            type="email" name="email" placeholder="Deine E-Mail" required>
 
-                    <label style="display:block;">
-                        <input type="checkbox" name="leistungen" value="deko"> Deko mieten
-                    </label>
+                        <fieldset style="border:none; padding:0; margin-bottom:10px;">
+                            <legend>Welche Leistungen interessieren dich?</legend>
 
-                    <label style="display:block; padding-bottom: 10px;">
-                        <input type="checkbox" name="leistungen" value="fotobox"> Fotobox mieten
-                    </label>
+                            <label style="display:block;">
+                                <input type="checkbox" name="leistungen" value="dj"> DJ buchen
+                            </label>
+                            <label style="display:block;">
+                                <input type="checkbox" name="leistungen" value="deko"> Deko mieten
+                            </label>
+                            <label style="display:block; padding-bottom:10px;">
+                                <input type="checkbox" name="leistungen" value="fotobox"> Fotobox mieten
+                            </label>
+                        </fieldset>
 
-                    <textarea class="w3-input w3-border w3-margin-bottom" rows="4"
-                        placeholder="Deine Nachricht"></textarea>
-                    <button class="w3-button w3-pink w3-block">Senden</button>
+                        <label for="nachricht">Deine Nachricht</label>
+                        <textarea id="nachricht" class="w3-input w3-border w3-margin-bottom"
+                            name="nachricht" rows="4" placeholder="Deine Nachricht"></textarea>
+
+                        <button type="submit" class="w3-button w3-pink w3-block">Senden</button>
+                    </form>
                 </div>
             </div>
 
-        </div>
+        </section>
     </main>
+
     <!-- Footer -->
     <footer class="w3-container w3-black w3-padding">
         <p class="w3-center">&copy; 2026 Eventify. Alle Rechte vorbehalten.</p>
