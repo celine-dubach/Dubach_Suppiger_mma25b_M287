@@ -5,6 +5,8 @@
     <title>Eventify - Kontakt</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+
+    <!-- Eigenes CSS -->
     <link rel="stylesheet" href="../css/styles.css">
 
     <!-- Favicon -->
@@ -13,84 +15,90 @@
 
 <body>
 
-    <!-- Navigation -->
-    <header class="w3-top">
-        <div class="w3-bar w3-black w3-padding nav-bar">
-            <a href="../index.html" class="w3-bar-item">
-                <img src="../img/logo-transp.png" alt="Eventify Logo" class="logo">
-            </a>
-            <button class="w3-bar-item w3-button hamburger-btn"
-                onclick="document.getElementById('nav-links').classList.toggle('open')"
-                aria-label="Navigation öffnen">&#9776;</button>
-            <nav id="nav-links" class="nav-links">
-                <a href="../index.html" class="w3-bar-item w3-button">Startseite</a>
-                <a href="angebot.html" class="w3-bar-item w3-button">Angebot</a>
-                <a href="ueber-uns.html" class="w3-bar-item w3-button">Über uns</a>
-                <a href="kontakt.html" class="w3-bar-item w3-button">Kontakt</a>
-            </nav>
-        </div>
-    </header>
+<!-- Navigation -->
+<header class="w3-top">
+    <div class="w3-bar w3-black w3-padding nav-bar">
 
-    <!-- Inhalt -->
-    <main>
-        <section class="w3-row w3-container w3-padding" style="margin-top:150px; margin-bottom:100px;">
+        <a href="../index.html" class="w3-bar-item">
+            <img src="../img/logo-transp.png" alt="Eventify Logo" class="logo">
+        </a>
 
-            <!-- Kontaktinfos -->
-            <address class="w3-half w3-padding-small">
-                <header class="section-title">
-                    <h1>Kontaktiere uns</h1>
-                    <div class="gold-line"></div>
-                </header>
-                <h2>Wir freuen uns auf deine Nachricht!</h2>
-                <p><span role="img" aria-label="E-Mail">✉</span> <a href="mailto:eventify@mail.ch">eventify@mail.ch</a></p>
-                <p><span role="img" aria-label="Telefon">📞</span> <a href="tel:+41791234567">079 123 45 67</a></p>
-                <p><span role="img" aria-label="Adresse">📍</span> Bahnhofstrasse 10, 6000 Luzern</p>
-            </address>
+        <!-- Hamburger-Button für Handy, toggle öffnet/schliesst das Menü -->
+        <button class="w3-bar-item w3-button hamburger-btn"
+            onclick="document.getElementById('nav-links').classList.toggle('open')"
+            aria-label="Navigation öffnen">&#9776;</button>
 
-            <!-- Kontaktformular -->
-            <div class="w3-half w3-padding-small">
-                <div class="w3-card w3-padding anfrage-karte" id="anfrage">
-                    <form action="#" method="post" novalidate>
-                        <h3>Anfrage senden</h3>
+        <nav id="nav-links" class="nav-links">
+            <a href="../index.html" class="w3-bar-item w3-button">Startseite</a>
+            <a href="angebot.html" class="w3-bar-item w3-button">Angebot</a>
+            <a href="ueber-uns.html" class="w3-bar-item w3-button">Über uns</a>
+            <a href="kontakt.html" class="w3-bar-item w3-button">Kontakt</a>
+        </nav>
 
-                        <label for="name">Dein Name</label>
-                        <input id="name" class="w3-input w3-border w3-margin-bottom"
-                            type="text" name="name" placeholder="Dein Name" required>
+    </div>
+</header>
 
-                        <label for="email">Deine E-Mail</label>
-                        <input id="email" class="w3-input w3-border w3-margin-bottom"
-                            type="email" name="email" placeholder="Deine E-Mail" required>
+<!-- Inhalt -->
+<main>
+    <section class="w3-row w3-container w3-padding" style="margin-top:150px; margin-bottom:100px;">
 
-                        <fieldset style="border:none; padding:0; margin-bottom:10px;">
-                            <legend>Welche Leistungen interessieren dich?</legend>
+        <!-- Linke Spalte: Kontaktinformationen -->
+        <address class="w3-half w3-padding-small">
+            <header class="section-title">
+                <h1>Kontaktiere uns</h1>
+                <div class="gold-line"></div>
+            </header>
+            <h2>Wir freuen uns auf deine Nachricht!</h2>
+            <p><span role="img" aria-label="E-Mail">✉</span> <a href="mailto:eventify@mail.ch">eventify@mail.ch</a></p>
+            <p><span role="img" aria-label="Telefon">📞</span> <a href="tel:+41791234567">079 123 45 67</a></p>
+            <p><span role="img" aria-label="Adresse">📍</span> Bahnhofstrasse 10, 6000 Luzern</p>
+        </address>
 
-                            <label style="display:block;">
-                                <input type="checkbox" name="leistungen" value="dj"> DJ buchen
-                            </label>
-                            <label style="display:block;">
-                                <input type="checkbox" name="leistungen" value="deko"> Deko mieten
-                            </label>
-                            <label style="display:block; padding-bottom:10px;">
-                                <input type="checkbox" name="leistungen" value="fotobox"> Fotobox mieten
-                            </label>
-                        </fieldset>
+        <!-- Rechte Spalte: Kontaktformular -->
+        <div class="w3-half w3-padding-small">
+            <div class="w3-card w3-padding anfrage-karte" id="anfrage">
+                <form action="#" method="post" novalidate>
+                    <h3>Anfrage senden</h3>
 
-                        <label for="nachricht">Deine Nachricht</label>
-                        <textarea id="nachricht" class="w3-input w3-border w3-margin-bottom"
-                            name="nachricht" rows="4" placeholder="Deine Nachricht"></textarea>
+                    <label for="name">Dein Name</label>
+                    <input id="name" class="w3-input w3-border w3-margin-bottom"
+                        type="text" name="name" placeholder="Dein Name" required>
 
-                        <button type="submit" class="w3-button w3-pink w3-block">Senden</button>
-                    </form>
-                </div>
+                    <label for="email">Deine E-Mail</label>
+                    <input id="email" class="w3-input w3-border w3-margin-bottom"
+                        type="email" name="email" placeholder="Deine E-Mail" required>
+
+                    <!-- Checkboxen für gewünschte Leistungen -->
+                    <fieldset style="border:none; padding:0; margin-bottom:10px;">
+                        <legend>Welche Leistungen interessieren dich?</legend>
+
+                        <label style="display:block;">
+                            <input type="checkbox" name="leistungen" value="dj"> DJ buchen
+                        </label>
+                        <label style="display:block;">
+                            <input type="checkbox" name="leistungen" value="deko"> Deko mieten
+                        </label>
+                        <label style="display:block; padding-bottom:10px;">
+                            <input type="checkbox" name="leistungen" value="fotobox"> Fotobox mieten
+                        </label>
+                    </fieldset>
+
+                    <label for="nachricht">Deine Nachricht</label>
+                    <textarea id="nachricht" class="w3-input w3-border w3-margin-bottom"
+                        name="nachricht" rows="4" placeholder="Deine Nachricht"></textarea>
+
+                    <button type="submit" class="w3-button w3-pink w3-block">Senden</button>
+                </form>
             </div>
+        </div>
 
-        </section>
-    </main>
+    </section>
+</main>
 
-    <!-- Footer -->
-    <footer class="w3-container w3-black w3-padding">
-        <p class="w3-center">&copy; 2026 Eventify. Alle Rechte vorbehalten.</p>
-    </footer>
+<!-- Footer -->
+<footer class="w3-container w3-black w3-padding">
+    <p class="w3-center">&copy; 2026 Eventify. Alle Rechte vorbehalten.</p>
+</footer>
 
 </body>
 
