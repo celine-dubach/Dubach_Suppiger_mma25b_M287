@@ -19,6 +19,7 @@ body {
     color: var(--black);
 }
 
+/* Pink für alle h2 und h3 */
 h2,
 h3 {
     color: var(--pink);
@@ -36,6 +37,7 @@ h3 {
     font-family: 'Arial Black', Arial, Helvetica, sans-serif;
 }
 
+/* Goldene Trennlinie unter Titeln */
 .gold-line {
     width: 80px;
     height: 3px;
@@ -52,25 +54,33 @@ h3 {
     margin-bottom: 150px;
 }
 
+/* Abgerundete Ecken für Medienelemente */
 video,
 audio {
     border-radius: 8px;
 }
 
 /*--W3.CSS Anpassungen--*/
+
+/* Flex-Layout mit Zeilenumbruch überschreiben */
 .w3-row {
     display: flex;
     align-items: stretch;
-    flex-wrap: wrap; /* NEU: erlaubt Umbruch */
+    flex-wrap: wrap;
 }
 
+/* Hover- und Aktivzustand der Navigationsbuttons */
 .w3-bar .w3-button:hover,
 .w3-bar .w3-button:active {
     background-color: var(--pink) !important;
     color: white !important;
 }
 
-/* Formular Animation */
+/* =========================================
+   FORMULAR ANIMATION
+========================================= */
+
+/* Kontaktkarte blendet beim Laden ein */
 .anfrage-karte {
     animation: einblenden 1s;
 }
@@ -91,6 +101,7 @@ audio {
    CSS FÜR STARTSEITE
 ========================================= */
 
+/* Abstand wegen fixierter Navigation */
 .startseite {
     margin-top: 95px;
 }
@@ -112,6 +123,7 @@ audio {
     display: block;
 }
 
+/* Text zentriert über dem Hero-Bild */
 .hero-overlay {
     position: absolute;
     top: 50%;
@@ -152,19 +164,19 @@ audio {
     margin-bottom: 25px;
 }
 
-/* Text Bereich */
+/* Über uns Textbereich */
 .about-text {
     font-size: 18px;
     line-height: 1.8;
     margin-bottom: 30px;
 }
 
-/* Bild rechts */
+/* Bild rechts neben dem Text */
 .about-image {
     width: 100%;
 }
 
-/* Schwarzer Bereich */
+/* Services: schwarzer Hintergrund mit weissem Text */
 .services-section {
     background-color: black;
     color: white;
@@ -174,6 +186,7 @@ audio {
     margin-top: 20px;
 }
 
+/* Schriftgrösse und Zeilenabstand für Services und Animation */
 .services-section p,
 .w3-animate-left p {
     font-size: 18px;
@@ -184,7 +197,11 @@ audio {
     margin-top: 15px;
 }
 
-/* Responsive */
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+/* Kleinere Schrift und Bildhöhe auf Mobilgeräten */
 @media screen and (max-width: 768px) {
 
     .hero-title {
@@ -217,18 +234,23 @@ audio {
     width: 50% !important;
 }
 
-/*Navigation*/
+/* =========================================
+   NAVIGATION
+========================================= */
 
+/* Navigationsleiste als Flexbox */
 .nav-bar { 
     display: flex !important; 
     align-items: center !important; 
 }
 
+/* Links rechtsbündig ausrichten */
 .nav-links { 
     display: flex; 
     margin-left: auto; 
 }
 
+/* Hamburger-Button nur auf Mobilgeräten sichtbar */
 .hamburger-btn { 
     display: none !important; 
     margin-left: auto; 
@@ -236,6 +258,7 @@ audio {
     background: none !important; 
 }
 
+/* Mobiles Menü: Hamburger einblenden, Links als Dropdown */
 @media (max-width: 600px) {
     .hamburger-btn { display: block !important; }
     .nav-links { display: none; flex-direction: column; width: 100%; position: absolute; top: 100%; left: 0; background: var(--black); }
