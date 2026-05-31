@@ -119,19 +119,19 @@ audio {
 
 /* Pinke Buttons & Überschriften */
 .pink-button {
-    background-color: #FF2F73;
+    background-color: var(--pink);
     color: white;
     border-radius: 8px;
     padding: 12px 24px;
 }
 
 .pink-button:hover {
-    background-color: #e02162;
+    background-color: var(--pink);
     color: white;
 }
 
 .pink-heading {
-    color: #FF2F73;
+    color: var(--pink);
     font-weight: bold;
     margin-bottom: 25px;
 }
