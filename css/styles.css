@@ -76,10 +76,7 @@ audio {
     color: white !important;
 }
 
-/* =========================================
-   FORMULAR ANIMATION
-========================================= */
-
+/* Formular Animation */
 /* Kontaktkarte blendet beim Laden ein */
 .anfrage-karte {
     animation: einblenden 1s;
@@ -97,14 +94,7 @@ audio {
     }
 }
 
-/* =========================================
-   CSS FÜR STARTSEITE
-========================================= */
-
-/* Abstand wegen fixierter Navigation */
-.startseite {
-    margin-top: 95px;
-}
+/* CSS für Startseite */
 
 /* Logo */
 .logo {
@@ -197,10 +187,12 @@ audio {
     margin-top: 15px;
 }
 
-/* =========================================
-   RESPONSIVE
-========================================= */
+/* Abstand wegen fixierter Navigation */
+.main-content {
+    margin-top: 200px;
+}
 
+/* Responsive */
 /* Kleinere Schrift und Bildhöhe auf Mobilgeräten */
 @media screen and (max-width: 768px) {
 
@@ -232,36 +224,4 @@ audio {
 
 .ueber-uns-row > div {
     width: 50% !important;
-}
-
-/* =========================================
-   NAVIGATION
-========================================= */
-
-/* Navigationsleiste als Flexbox */
-.nav-bar { 
-    display: flex !important; 
-    align-items: center !important; 
-}
-
-/* Links rechtsbündig ausrichten */
-.nav-links { 
-    display: flex; 
-    margin-left: auto; 
-}
-
-/* Hamburger-Button nur auf Mobilgeräten sichtbar */
-.hamburger-btn { 
-    display: none !important; 
-    margin-left: auto; 
-    font-size: 2rem; 
-    background: none !important; 
-}
-
-/* Mobiles Menü: Hamburger einblenden, Links als Dropdown */
-@media (max-width: 600px) {
-    .hamburger-btn { display: block !important; }
-    .nav-links { display: none; flex-direction: column; width: 100%; position: absolute; top: 100%; left: 0; background: var(--black); }
-    .nav-links.open { display: flex; }
-    .nav-links a:hover { background-color: var(--pink) !important; }
 }
