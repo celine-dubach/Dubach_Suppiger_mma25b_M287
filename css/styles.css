@@ -76,24 +76,6 @@ audio {
     color: white !important;
 }
 
-/* Formular Animation */
-/* Kontaktkarte blendet beim Laden ein */
-.anfrage-karte {
-    animation: einblenden 1s;
-}
-
-@keyframes einblenden {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 /* CSS für Startseite */
 
 /* Logo */
@@ -191,6 +173,9 @@ audio {
 .main-content {
     margin-top: 200px;
 }
+.startseite {
+    margin-top: 100px;
+}
 
 /* Responsive */
 /* Kleinere Schrift und Bildhöhe auf Mobilgeräten */
@@ -211,10 +196,15 @@ audio {
 
 /* Vorteile: Tablet 2-spaltig, Handy 1-spaltig */
 @media (max-width: 992px) {
-    .vorteile-row > div { width: 50% !important; }
+    .vorteile-row>div {
+        width: 50% !important;
+    }
 }
+
 @media (max-width: 600px) {
-    .vorteile-row > div { width: 100% !important; }
+    .vorteile-row>div {
+        width: 100% !important;
+    }
 }
 
 /* Über uns: immer 2-spaltig, auch auf Handy */
@@ -222,6 +212,6 @@ audio {
     flex-wrap: nowrap !important;
 }
 
-.ueber-uns-row > div {
+.ueber-uns-row>div {
     width: 50% !important;
 }
